@@ -1,0 +1,154 @@
+/* Reset default margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Center content horizontally */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Set sizes for h1, h2, h3, and body */
+h1 {
+  font-size: 2rem; /* Set the font size for h1 */
+}
+
+h2 {
+  font-size: 1.3rem; /* Set the font size for h2 */
+}
+
+h3 {
+  font-size: 1.25rem; /* Set the font size for h3 */
+}
+
+body {
+  font-size: 1rem; /* Set the font size for body */
+    display: flex;
+  }
+  
+/* Add some spacing between sections */
+.section {
+  margin-bottom: 2rem; /* Increased spacing between sections */
+}
+
+/* Increase the width of the section content */ /* Add background color and padding to sections */
+.section-content {
+  min-width: 600px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the section content horizontally */
+  background-color: #f9f9f9; /* Light gray background color */
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Additional styling for clear differentiation between main sections */
+.section-heading {
+  margin-bottom: 1.5rem; /* Increased space below section headings */
+}
+
+
+/* CSS for the button */
+.section-button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Position the button container */
+.button-container {
+  position: relative;
+  text-align: right; /* Align the button to the right within the container */
+  margin-top: 1rem; /* Add some top margin to separate the button from content */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* OTHER */
+
+/* Logo styles */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  transition: filter 0.3s;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+/* React logo specific style */
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Spin animation for logo */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Apply animation to logo if motion is enabled */
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styles */
+.card {
+  padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Subtle text color for footer */
+.read-the-docs {
+  color: #888;
+}
