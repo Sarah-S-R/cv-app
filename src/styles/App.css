@@ -40,6 +40,12 @@ body {
   margin-bottom: 2rem; /* Increased spacing between sections */
 }
 
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* Increase the width of the section content */ /* Add background color and padding to sections */
 .section-content {
   min-width: 600px; /* Adjust the max-width as needed */

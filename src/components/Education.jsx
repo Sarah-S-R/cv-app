@@ -1,10 +1,17 @@
 // Education.js
 import React, { useState } from 'react';
 
-const Education = () => {
-  const [school, setSchool] = useState('');
-  const [title, setTitle] = useState('');
-  const [date, setDate] = useState('');
+import TextInput from './inputs/TextInput';
+
+
+const Education = ({
+  state
+}) => {
+  
+  const {
+    school, setSchool, title, setTitle, date, setDate
+  } = state
+
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEdit = () => {
@@ -15,10 +22,6 @@ const Education = () => {
     // Handle form submission
     setIsEditing(false);
   };
-
-
-
-
   
   return (
     <div className="section">
@@ -26,12 +29,24 @@ const Education = () => {
       <div className="section-content">
         {isEditing ? (
           <form onSubmit={handleSubmit}>
-            <label>School: </label>
-            <input type="text" value={school} onChange={(e) => setSchool(e.target.value)} placeholder="Enter your school" /><br />
-            <label>Title of Study: </label>
-            <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Enter your title of study" /><br />
-            <label>Date of Study: </label>
-            <input type="text" value={date} onChange={(e) => setDate(e.target.value)} placeholder="Enter date of study" /><br />
+            <TextInput 
+              value={school}
+              setValue={setSchool}
+              placeholder={'Enter your school'}
+              label={'School'}
+            />
+            <TextInput 
+              value={title}
+              setValue={setTitle}
+              placeholder={'Title of Study'}
+              label={'Title of Study'}
+            />
+            <TextInput 
+              value={date}
+              setValue={setDate}
+              placeholder={'Enter the date of study'}
+              label={'Date of study'}
+            />
             <div className="button-container">
               <button type="submit" className="section-button">Submit</button>
             </div>
